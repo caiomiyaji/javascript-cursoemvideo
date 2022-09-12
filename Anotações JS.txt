@@ -1,0 +1,953 @@
+	Comando para mostrar alerta na tela: (aula4 mod A)
+
+<script>
+	window.alert('Testando um alert');
+</script>
+
+Obs: o ponto e vírgula ao final do código é opcional em js
+
+
+
+
+
+
+Comando para alerta de confirmações:
+
+<script>
+	window.confirm('Está gostando de Javascript?');
+</script>
+
+
+
+Comando para alerta de perguntas:
+
+<script>
+	window.prompt('Qual é p seu nome?');
+</script>
+
+Obs: o valor retornado pelo prompt é sempre uma string
+
+
+
+
+Comando para comentarios em JS:
+// para comentarios em uma linha
+/*  comentario */  para comentarios com mais de uma linha
+
+
+
+Regras nomenclatura para variaveis/identificadores:
+-Podem começar com letra, $ ou _
+-Nao podem começar com numeros
+-É possível usar letras ou números
+-É possível usar acentos e símbolos
+-Não podem conter espaços
+-Nao podem ser valores reservados (que o javascript ja usa)
+
+
+
+
+Comando para inserir valores dentro de variáveis:
+
+var nome = 'caio'
+var numero = 2
+
+
+
+
+Comando para abrir terminal no VScode:
+
+ctrl + shift + '
+
+
+
+Comando para conectar ao nodejs:
+
+Abrir o terminal com ctrl + shift + ' e digitar node
+
+
+
+
+Comando para fechar o node no VScode:
+
+.exit
+
+ e depois: exit para fechar o terminal
+
+
+
+Comando para limpar o node no VScode:
+
+ctrl + L
+
+
+
+Tipos de dados primitivos Primordiais em Javascript:
+-number  >  (sem diferenciar reais e inteiros)
+-string  > texto
+-boolean > true or false
+
+Outros tipos primitivos nao Primordiais:
+-Infinity  >  valor interno de number
+-NaN       > valor interno de number
+-null
+-undefined
+-object
+-array     > vetor
+-function
+
+
+
+
+Comando para ver qual o tipo do dado:
+typeof n1
+typeof nome1
+typeof Infinity
+typeof NaN
+typeof undefined
+
+
+
+Comando para inserir resultado de prompt dentro de variavel:
+var nome = window.prompt('Qual o seu nome?')
+
+
+
+
+Comando para mostrar valor de variavel em um alert concatenando com +:
+window.alert('Olá' + nome + '!')
+
+Obs: o sinal de + serve para concatenar
+
+
+
+
+
+Comando para transformar string em number (Inteiro ou Real):
+Number.parseInt(n)   >   converte para numero inteiro
+
+Number.parseFloat(n)  > converte para numero real
+
+ex:
+
+var n1 = Number.parseInt(window.prompt('Digite um numero: '))
+var n2 = Number.parseFloat(window.prompt('Digite outro numero: '))
+
+
+
+
+Comando para converter string em number de forma simplificada:
+
+Number(n)    >    O js identifica quando o numero é inteiro ou real e faz a conversao
+
+ex:
+
+var n1 = Number(window.prompt('Digite um numero: '))
+var n2 = Number(window.prompt('Digite outro numero: '))
+
+
+
+
+Comando para converter number para string:
+
+String(n)
+n.toString()
+
+ex:
+
+window.alert('A soma dos dois numeros é igual a ' + String(s))  > forma mais recente
+window.alert('A soma dos dois numeris é igual a ' + n.toString())
+
+
+
+Comando para concatenar utilizando ${}:
+`O aluno ${nome} com idade ${idade} tirou a nota ${nota}`
+
+Obs: Precisa utilizar a crase ``   (sinal agudo ao contrario)
+
+
+
+Comando para escrever na tela com js:
+document.write(`Olá ${nome}! Tudo bem?`)
+
+
+
+
+Comando que retorna a quantidade de caracteres de uma string:
+
+s.length
+
+ex: 
+
+document.write(`Olá `{nome}! Seu nome tem ${nome.length} letras`)
+
+Obs: .length conta espaços vazios
+
+
+
+
+Comando para colocar uma string tudo em maiuscula:
+
+s.toUpperCase()
+
+ex:
+
+document.write(`Seu nome em maiúsculas: ${nome.toUpperCase()}`)
+
+
+
+
+
+Comando para colocar uma string tudo em minusculas:
+
+s.toLowerCase()
+
+ex:
+
+document.write(`Seu nome em minúsculas: ${nome.toLowerCase()}`)
+
+
+
+
+Comando para formatar numero com qntd de casas decimais especificas:
+
+n.toFixed(2)
+
+ex:
+
+var n1 = 1545.5
+
+n1.toFixed(2)
+
+
+
+
+
+Comando para substituir ponto por virgula:
+n.toFixed(2).replace('.',',')
+
+ex:
+var n1 = 1545.5
+
+n1.toFixed(2).replace('.',',')
+
+
+
+
+
+Comando para formatar moeda:
+
+ex:
+var n1 = 1545.5
+
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+
+
+
+
+
+Operadores aritméticos em Js:
++   >   soma
+-   >   subtração
+*   >   multiplicação
+/   >   divisão
+%   >   resto da divisao 
+Ex:  5/2  o resto é 1
+**  >   potência (5²)
+
+
+
+Precedencia de operadores aritmeticos:
+1 - ()
+2 - **
+3 - / ou * ou %
+4 - + ou -
+ 
+
+
+
+Comando de auto atribuição:
+var n = n + 4
+var n = n * 4
+var n = n /3
+var n = n % 2
+var n = n ** 2
+
+
+
+
+Comando de auto atribuição simplificado:
+var n = 4
+
+n += 2
+n -= 1
+n *= 2
+n %= 2
+n /= 2
+n **= 2
+
+
+
+
+
+Comando para incremento aritmetico:
+var x = 5
+x = x + 1
+
+
+
+
+Comando de incremento simplificado:
+
+var x = 5
+x++    > adiciona 1 a variavel x (pos incremento)
+
+x--    > subtrai 1 da variavel x (pos incremento)
+
+--x    > subtrai 1 da variavel x  (pre incremento)
+
+++x    > adiciona 1 a variavel x (pre incremento)
+
+
+
+
+
+Operadores relacionais:
+>   -   maior
+<   -   menor   
+>=  -   maior ou igual
+<=  -   menor ou igual
+==  -   igual (sem testar o tipo do dado, ou seja 5 é igual a '5') 
+===  -  igual (testa o tipo, ou seja 5 e '5' sao diferentes)
+!=   -   diferente (sem testar o tipo, ou seja 5 e '5' nao sao diferentes)
+!==  -  diferente ( testa o tipo, ou seja 5 e '5' sao diferentes)
+
+
+
+
+
+Operadores lógicos:
+!   >   negação
+&&  >   conjunçao ( and )
+||  >   disjunçao ( or )
+
+
+
+
+Ordem dos operadores logicos:
+1 - !
+2 - &&
+3 - ||
+
+
+
+
+Ordem entre operadores aritmeticos, relacionais e logicos em msm expressao:
+1 - aritmeticos ((), **, *, /, %, +, -)
+2 - relacionais (>, <, >=, <=, ==, ===, !=, !==)
+3 - logicos (!, &&, ||)
+
+ 
+
+
+Operador ternario:
+
+teste ? true : false
+
+ex: 8 >= 7 ? 'aprovado':'reprovado'
+resultado: 'aprovado'
+
+
+
+
+
+
+Comando para escrever um texto no navegador usando JS:
+
+window.document.write('Olá, Mundo!')
+
+
+
+
+Comando para mostrar o charset:
+
+window.document.write(window.document.charset)
+
+
+
+
+Comando para mostrar o navegador:
+
+window.document.write(window.navigator.appName)
+
+
+
+
+Comando para mostrar a url no navegador:
+
+window.document.write(window.document.URL)
+
+
+
+
+Comando para selecionar elemento por tag:
+
+var p1 = window.document.getElementsByTagName('tag')[0]
+window.document.write(p1.innerText) 
+
+Obs: dentro de ('') inserir a tag que for selecionar
+dentro de [] inserir qual a tag, se é a primeira, a segunda, etc. A primeira tag, é a numero 0
+
+
+
+Comando para mudar a cor da fonte de um elemento em Js:
+
+var p1 = window.document.getElementsByTagName('p') [1]
+
+p1.style.color = 'blue'
+
+
+
+Comando para mostrar na tela o texto de um elemento html:
+
+var p1 = window.document.getElementsByTagName('p') [0]
+
+window.document.write(p1.innerHTML)
+
+
+
+
+Selecionar objetos por id:
+
+var d = window.document.getElementById('id')
+
+
+
+
+
+Comando para mudar o conteudo de um elemento com JS:
+
+var d = window.document.getElementById('msg')
+
+d.innerText = 'testando'
+
+
+
+
+
+Selecionar elemento por nome:
+
+var d = window.document.getElementsByName('msg') [0]
+
+
+
+
+Selecionar elemento por classe:
+
+var d = window.document.getElementsByClassName('msg') [0]
+
+
+
+
+Comando para selecionar por seletor:
+
+var d = window.document.querySelector('div.classe') [0]
+var d = window.document.querySelector('div#id')
+
+
+
+
+Eventos de mouse:
+mouseenter   >  quando o mouse passa por cima
+mouseout     >  quando tira o mouse de cima do elemento
+mousemove    >  quando o mouse esta se mexendo por cima do elemento
+mousedown    >  quando clica e segura
+mouseup      >  quando clica e segura e depois solta
+click        >  quando clica rapidamente no elemento
+
+
+
+
+Comando para adidionar evento a tag de um elemento HTML:
+<div id="id" onclick="nomefunção()">
+conteudo
+</div>
+
+
+
+
+Comando para criar função em JS:
+function nome_função(){
+	o que vai acontecer na função aqui
+}
+
+
+
+
+Comando para criar Event Listener de eventos do JS:
+variavel.addEventListener('nomedoevento', nomedafuncao)
+
+ex:
+a.addEventListener('click', clicar)
+
+
+
+
+
+Comando de condição simples:
+
+if(condição) {
+	true
+}
+
+
+
+
+
+Comando para condição com else:
+
+if(condição) {
+	true
+}else{
+	false
+}
+
+
+
+Comando para escrever um 'msg' no node.js:
+
+console.log('mensagem')
+
+
+
+
+
+Condição aninhada sem else if:
+
+if (condição) {
+	bloco 1
+}else{
+	if (condição 2) {
+		bloco2
+	}else{
+		bloco3
+	}
+}
+
+
+
+
+
+
+Condição aninhada com else if:
+
+if (condição1) {
+	bloco1
+}else if (condição2){
+	bloco2
+}else{
+	bloco3
+}
+
+
+
+
+
+Comando de hora com if e else if no NodeJS:
+
+var agora = new Date()
+var hora = agora.getHours()
+
+console.log(`Agorta são exatamente ${hora} horas`)
+
+if(hora < 6){
+	console.log('Boa madrugada!')
+}else if(hora < 12) {
+	console.log('Bom dia!')
+}else if(hora <= 18){
+	console.log('Boa tarde!') 
+}else if(hora < 24) {
+	console.log ('Boa noite')
+}else{
+	console.log('Hora inválida')
+}
+
+
+
+
+
+Comando de condição múltipla:
+
+switch (expressão){
+	case valor1:
+		bloco1
+	break         
+
+	case valor2:
+		bloco2
+	break
+	
+	case valor3:
+		bloco3
+	break
+
+	default:
+		blocoDefault
+	break
+}
+
+Obs: O break ao final de cada case, é OBRIGATÓRIO
+
+
+
+
+
+COmando que traz a data atual do sistema que está executando o script:
+
+var agora = new Date()
+var = diaSemana = agora.getDay()
+
+Obs: o getDay() retorna o dia da semana em números, sendo:
+
+0 - Domingo
+1 - Segunda
+2 - Terça
+3 - Quarta
+4 - Quinta
+5 - Sexta
+6 - Sábado
+
+
+
+
+Comando para pegar o ano ano atual inteiro:
+
+var data = new Date()
+var ano = data.getFullYear()
+
+
+
+
+
+
+Comando para verificar se um input se encontra vazio:
+
+var input = window.document.getElementById('inputId')
+
+if(input.value.length == 0){     
+
+}
+
+Obs: .value.length serve para ver o tamanho do que dentro do input.
+
+
+
+
+
+Comando para criar um elemento html dinamicamente pelo JavaScript:
+
+var res = window.document.querySelector('div#res')     >    Este comando insere a div#res em uma variavel
+var imagem = document.createElement('img')      >      Este comando cria uma tag e insere em uma variavel
+imagem.setAttribute('id', 'foto')      >     Este comando define parâmetros na tag a ser criada
+imagem.setAttribule('src', 'images/imagem.png')     >    Este comando define o parâmetro src da imagem criada
+
+res.appendChild(img)    >    Este comando coloca a tag imagem na div#res através das variavel res
+
+
+
+
+
+Comando de repetição while com condição no inicio:
+
+while (condição){
+	bloco
+}
+
+ex:
+var c = 1
+
+while(c <= 10){
+	console.log(`Passo ${c}`)
+	c++
+}
+Este codigo faz com que escreva 10 vezes "Passo ${c}"
+
+Obs: o while irá se repetir enquanto a condição for verdadeira
+
+
+
+
+
+Comando Do While de repetição com condição ao final:
+
+do{
+	bloco
+}while (condição)
+
+ex:
+do{
+	console.log(`Passo ${c}`)
+	c++
+}while (c <= 10)
+
+Obs: O loop irá ocorrer enquanto a condição no final for verdadeira
+
+
+
+
+Comando de repetiçao for:
+
+for(inicio;teste;incremento){
+	bloco
+}
+
+ex:
+for(var c = 1; c <= 10; c++){
+	console.log(c)
+}
+
+Obs: O loop irá se repetir enquanto o teste lógico for verdadeiro 
+
+
+
+
+
+Comando para fazer dropdown em HTMl:
+
+<select name="tabuada" id="seltab" size="10">
+	<option>Opção1</option>
+	<option>Opção2</option>
+</select>
+
+
+
+
+
+Comando para criar Array (variável composta):
+
+let x = [1, 2, 3, 4, 5, 6]
+var y = ['dado1', 'dado2', 'dado3']
+
+Obs: os índices das variáveis compostas, começam no 0, ou seja, o primeiro dado da variável está armazenado no índice 0 e não no 1
+Obs: variáveis compostas consegue guardar diversos dados, diferente da variável simples que armazena apenas um por variável
+
+
+
+
+
+Comando para adicionar um novo valor/dado à variável num índice específico:
+
+num[3] = 6
+
+[3]   >   o indice da variável onde o novo valor será inserido
+
+
+
+
+
+Comando para add um novo valor à variável de forma "automática":
+
+num.push(7)
+
+Obs: este comando faz com que o valor 7 seja inserido na variável num, de forma onde o próprio Js cria um novo índice e insere o valor dentro, sem ter que especificar o índice.
+
+
+
+
+
+Comando para saber quantos índice tem uma variável:
+
+num.length
+
+Obs: este comando fará com que o js retorne a quantidade de índices com valores que existem dentro da variável num
+
+
+
+
+
+Comando para ordenar os valores de uma variável:
+
+num.sort()
+
+Obs: este comando irá ordenar os valores dentro da variável num de forma crescente.
+
+
+
+
+Forma simplificada de utilizar a repetição for para Arrays e Objetos:
+
+for(let variável_counter in variável array){
+	console.log(variavelArray[variavel_counter])
+}
+
+ex:
+
+for(let pos in num){
+	console.log(num[pos])
+} 
+
+
+
+
+
+Comando para saber qual índice está guardando o um valor:
+
+variavel.indexOf(valor)
+
+num.indexOf(7)
+
+Obs: Este comando retornará o índice que guarda o valor informado. Quando não houver o valor informado, será retornado o valor -1 como índice
+
+
+
+
+Comando para criar função com parâmetros:
+
+function ação(param){
+	bloco
+	return res     >     resultado retornado pela função
+}
+
+ação(5)    >   5 é o param a ser enviado
+
+ex:
+function parimp(n){
+	if(n % 2 == 0){
+		return 'par'
+	}else{
+		return 'impar'
+	}
+}
+
+let res = parimp(11)
+console.log(res)
+
+
+
+
+
+Comando para criar função com dois parâmetros:
+
+function soma(n1, n2) {
+	return n1 + n2
+}
+
+let res = soma(1, 5)
+console.log(res)
+
+
+
+
+
+Comando para criar função e retornar valor direto sem precisar criar uma variável:
+
+function soma(n1, n2){
+	return n1 + n2
+}
+
+console.log(soma(1, 5))
+
+
+
+
+
+Comando para criar função com parâmetro com valor padrão:
+
+function soma(n1 = 0, n2 = 0){      >     caso um dos parâmetros não recebam valores, o 0 será o padrão
+	return n1 + n2	
+}
+
+console.log(soma(2))
+
+Obs: Isto serve para quando uma função possui 2 parâmetros, porém só é enviado um parâmetro.NEste caso, o valor definido na criação da função será utilizado.
+
+
+
+
+
+Comando para inserir uma função dentro de uma variável:
+
+let v = function(x){
+	return x*2
+}
+
+console.log(v(5))
+
+Obs: Neste caso, a variável v tem como valor, a função que retorna o dobro do valor do parâmetro x.
+
+
+
+
+
+Exemplo de função que retorna o fatorial de um número:
+
+// 5! = 5 x 4 x 3 x 2 x 1
+
+function fatorial(n){
+	let fat = 1
+	for(let c = n; c > 1; c--){
+		fat *=c
+	}
+	return fat
+}
+console.log(fatorial(5))
+
+
+
+
+
+
+Comando de função recursiva:
+
+function fatorial (n){
+	if(n == 1){
+		return 1
+	}else{
+		return n * fatorial(n-1)
+	}
+}
+
+console.log(fatorial(5))
+
+Obs: A função recursiva é quando se chama ela mesma dentro dela mesma
+
+
+
+
+
+Exemploi de função booleana para verificar numero:
+
+let num = 101
+
+function isNumero(n){
+	if(Number(n) >= 1 && Number(n) <= 100){
+		return true
+	}else{
+		return false
+	}
+}
+
+if(!isNumero(num.value){
+	console.log('Não é número entre 1 e 100')
+}else{
+	console.log('É numero entre 1 e 100')
+}
+
+Obs: o ! no if serviu para saber se o retorno da função isNumero era falso. O ! significa negação
+
+
+
+
+
+Comando para criação de objetos:
+
+let amigo = {nome: 'José',
+ sexo: 'M',
+ peso: 85.4,
+ engordar(p=0){
+	console.log('Engordou')
+	this.peso += p
+}}
+
+amigo.engordar(2)
+console.log(`${amigo.nome} pesa ${amigo.peso}`)
